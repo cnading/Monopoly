@@ -9,6 +9,7 @@ public class Dice
 				int die2 = (int) (Math.random() * 6) + 1;
 				int total = die1+die2;
 				return total;
+				
 			}
 
 	}
