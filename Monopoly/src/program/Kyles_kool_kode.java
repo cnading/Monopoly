@@ -1,4 +1,4 @@
-package monopoly;
+package program;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

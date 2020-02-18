@@ -1,4 +1,4 @@
-package monopoly;
+package program;
 
 public class Intro
 	{
