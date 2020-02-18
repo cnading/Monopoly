@@ -6,7 +6,7 @@ public class MonopolyRunner
 	public static void main(String[] args)
 	{
 		Intro.intro();
-		Settup.settup();
+		Setup.setup();
 		Start.start();
 		Initialize.initialize();
 		while(players.size() > 1)
