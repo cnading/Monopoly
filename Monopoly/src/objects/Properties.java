@@ -1,4 +1,4 @@
-package monopoly;
+package objects;
 
 public abstract class Properties extends spaces {
 	protected int cost;

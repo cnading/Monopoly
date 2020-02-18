@@ -12,10 +12,10 @@ public class MonopolyRunner
 	}
 	
 	public static void introToGame(){
-		Introduction.introToGame();
+//		Introduction.introToGame();
 	}
 	
 	public static void rulesOfTheGame() {
-		Introduction.rules();
+//		Introduction.rules();
 	}
 }

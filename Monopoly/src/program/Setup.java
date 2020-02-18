@@ -1,4 +1,4 @@
-package monopoly;
+package program;
 
 import java.util.Scanner;
 

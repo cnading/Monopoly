@@ -1,21 +1,8 @@
-package monopoly;
+package program;
 
 import java.util.Scanner;
 
 public class Introduction {
-
-	public static void main(String[] args) {
-		
-		// TODO enter in a time delay
-		
-		//Need:
-		//Name, character choice, intro screen to game
-		
-		introToGame();
-		rules();
-		//blah
-
-	}
 	
 	public static void introToGame(){
 		System.out.println("Welcome to Monopoly -- The Fast Dealing, Property Trading Game.");
