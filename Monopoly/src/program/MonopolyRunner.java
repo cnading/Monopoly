@@ -5,7 +5,6 @@ public class MonopolyRunner
 	
 	public static void main(String[] args)
 	{
-		
 		Intro.intro();
 		Settup.settup();
 		Start.start();
@@ -15,6 +14,5 @@ public class MonopolyRunner
 			TurnMenu.turnMenu();
 		}
 		CongraWinner.congraWinner();
-		
 	}
 }
