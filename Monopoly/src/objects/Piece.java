@@ -1,4 +1,4 @@
-package monopoly;
+package objects;
 
 import javax.swing.ImageIcon;
 import javax.swing.JLabel;
