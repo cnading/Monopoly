@@ -1,3 +1,4 @@
+
 package program;
 
 public class MonopolyRunner
@@ -26,3 +27,4 @@ public class MonopolyRunner
 //		CongraWinner.congraWinner();
 	}
 }
+
