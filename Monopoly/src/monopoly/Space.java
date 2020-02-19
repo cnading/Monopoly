@@ -17,4 +17,5 @@ public abstract class Space {
 		this.type = type;
 	}
 
-}
+} 
+
