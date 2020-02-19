@@ -1,17 +1,13 @@
 package program;
 
+import monopoly.Space;
+import monopoly.*;
 public class MonopolyRunner
 {
 	
 	public static void main(String[] args)
 	{
-		try {
-			String[] names = Input_File.readFile("ThemeData");
-			System.out.println(names);
-		} catch (Exception e) {
-			
-			e.printStackTrace();
-		}
+	
 		
 //		Intro.intro();
 //		Settup.settup();
