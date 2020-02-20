@@ -1,20 +1,26 @@
 
 package program;
-
+import monopoly.*;
 public class MonopolyRunner
 {
 	
-	public static void main(String[] args)
+	public static void main(String[] args) 
 	{
-
-		Intro.intro();
-		Setup.setup();
-		Start.start();
-		Initialize.initialize();
-		while(players.size() > 1)
-		{
-			TurnMenu.turnMenu();
-		}
+		String[] fileNames = {"ThemeData","SpaceData"};
+try {
+	Space[] board = Input_File.fillSpaceData(fileNames);
+} catch (Exception e) {
+	
+	e.printStackTrace();
+}
+//		Intro.intro();
+//		Setup.setup();
+//		Start.start();
+//		Initialize.initialize();
+//		while(players.size() > 1)
+//		{
+//			TurnMenu.turnMenu();
+//		}
 		
 //		Intro.intro();
 //		Settup.settup();

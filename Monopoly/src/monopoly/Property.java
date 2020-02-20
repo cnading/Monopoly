@@ -10,15 +10,15 @@ protected int hotels;
 protected Player owner;
 
 
-	public Property(String theName, String theType, int theCost, int[] theFees) {
-		type = theType;
-		name = theName;
-		cost = theCost;
-		fees = theFees;
-		
-		
-		
-	}
+public Property(String theName, String theType, int theCost, int[] theFees, int housePrice) {
+	type = theType;
+	name = theName;
+	cost = theCost;
+	fees = theFees;
+	
+	
+	
+}
 
 
 	public int getCost() {
