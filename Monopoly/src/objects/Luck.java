@@ -14,7 +14,7 @@ public class Luck extends Space{
 		
 	}
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

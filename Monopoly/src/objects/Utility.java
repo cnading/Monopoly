@@ -50,7 +50,7 @@ protected Player owner;
 	}
 
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

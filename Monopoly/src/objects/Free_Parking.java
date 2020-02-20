@@ -14,7 +14,7 @@ public class Free_Parking extends Space{
 		
 	}
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

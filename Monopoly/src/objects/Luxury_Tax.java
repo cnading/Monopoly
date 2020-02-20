@@ -27,7 +27,7 @@ return fees[0];
 	}
 
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

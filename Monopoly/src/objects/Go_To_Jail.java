@@ -14,7 +14,7 @@ public class Go_To_Jail extends Space{
 		
 	}
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

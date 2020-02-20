@@ -79,7 +79,7 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	}
 
 
-	protected void action() {
+	public void action() {
 		
 		
 	}

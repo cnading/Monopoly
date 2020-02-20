@@ -14,7 +14,7 @@ public class Go extends Space{
 		
 	}
 
-	protected void action() {
+	public void action() {
 		
 		
 	}
