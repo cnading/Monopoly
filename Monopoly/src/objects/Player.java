@@ -15,12 +15,12 @@ public class Player {
 	
 	public Player(String n, String p, boolean j, int b, int po, ArrayList<String> pro)
 	{
-		n= name;
-		p= piece;
-		j = jail;
-		b= balance;
-		po= position;
-		pro = properties;
+		name = n;
+		piece = p;
+		jail = j;
+		balance = b;
+		position = po;
+		properties = pro;
 	}
 
 	public String getName() {

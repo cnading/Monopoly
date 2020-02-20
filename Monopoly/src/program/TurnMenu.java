@@ -50,9 +50,8 @@ public class TurnMenu
 		TextGraphics.fillBoard();
 		TextGraphics.displayBoard();*/
 		//action
-		/*System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
-		Data.board[Data.players.get(Data.turn).getPosition()].action();*/
-		//loseGame?
+		System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
+		Data.board[Data.players.get(Data.turn).getPosition()].action();
 		if(Data.players.get(Data.turn).getBalance() < 0)
 		{
 			System.out.println("You lose! You're out of the game. Haha, loser!");

@@ -56,7 +56,7 @@ public class Settup {
 			piece = Data.pieces.get(pieceNumb);
 			Data.pieces.remove(pieceNumb);
 			//makeObject
-			Data.players.add(new Player(name, piece, false, 1500, 0, blank));
+			Data.players.add(new Player(name, piece, false, 1500, i, blank));
 			//displayPlayer
 			System.out.println("Welcome to Monopoly, " + Data.players.get(i).getName() + "!");
 			System.out.println("You are the " + Data.players.get(i).getPiece() + " piece.");
@@ -64,6 +64,6 @@ public class Settup {
 		}
 		
 		//makeBoard
-		//Data.board = Input_File.fillSpaceData(Data.files); //Fix this!!! Setup the files array properly in Data.
+		Data.board = Input_File.fillSpaceData(Data.files); //Fix this!!! Setup the files array properly in Data.
 	}
 }
