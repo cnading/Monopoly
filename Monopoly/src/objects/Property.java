@@ -1,6 +1,6 @@
-package monopoly;
+package objects;
 
-import objects.Player;
+
 
 public class Property extends Space{
 protected int cost;
