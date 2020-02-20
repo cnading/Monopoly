@@ -20,15 +20,15 @@ public class Intro
 		//action
 		if(yOrN.equals("y"))
 		{
-			System.out.println("Good choice!");
+			System.out.println("Good choice!\n");
 		}
 		else if(yOrN.equals("n"))
 		{
-			System.out.println("To bad you are playing anyways.");
+			System.out.println("To bad you are playing anyways.\n");
 		}
 		else
 		{
-			System.out.println("I'll take that as a yes!");
+			System.out.println("I'll take that as a yes!\n");
 		}
 	}
 }

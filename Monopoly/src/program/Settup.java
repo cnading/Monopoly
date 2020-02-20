@@ -32,14 +32,17 @@ public class Settup {
 		//getPlayerCount
         System.out.println("Ideally you need between 2-8 people, how many people are in your party?");
 		System.out.println("Please enter the number of players for the game...");
+		System.out.print("Input:");
 		Data.numbOfPlayers = intInput.nextInt();
+		System.out.println("");
 		
 		//makePlayers
-		for(int i = 0; i < Data.numbOfPlayers; i++)
+		for(int i = 0; i < Data.numbOfPlayers-1; i++)
 		{
 			//getName
 			System.out.println("Welcome new Player!");
 			System.out.println("Enter your name.");
+			System.out.print("Input:");
 			name = strInput.nextLine();
 			//getPiece
 			System.out.println("Select a piece from the list below.");
@@ -48,12 +51,18 @@ public class Settup {
 				System.out.println("(" + count + ")" + p);
 				count++;
 			}
-			pieceNumb = intInput.nextInt();
+			count = 1;
+			System.out.print("Input:");
+			pieceNumb = intInput.nextInt()-1;
 			piece = Data.pieces.get(pieceNumb);
 			Data.pieces.remove(pieceNumb);
 			//makeObject
 			Data.numbOfPlayers++;
-			Data.players.add(new Player(name, piece, false, i, i, blank));
+			Data.players.add(new Player(name, piece, false, 1500, 0, blank));
+			//displayPlayer
+			System.out.println("Welcome to Monopoly, " + name + "!");
+			System.out.println("You are the " + piece + " piece.");
+			System.out.println("");
 		}
 		
 		//makeBoard
