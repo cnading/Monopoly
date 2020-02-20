@@ -5,8 +5,7 @@ import java.util.Scanner;
 import objects.*;
 
 public class Settup {
-
-	public static void settup(String[] args) throws Exception 
+	public static void settup() throws Exception 
 	{
 		//var
 		String name;
@@ -59,5 +58,4 @@ public class Settup {
 		//makeBoard
 		Data.board = Input_File.fillSpaceData(Data.files);
 	}
-
 }
