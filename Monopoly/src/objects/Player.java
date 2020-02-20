@@ -1,4 +1,4 @@
-package monopoly;
+package objects;
 
 import java.util.ArrayList;
 
@@ -8,6 +8,9 @@ public class Player {
 	private boolean jail=false;
 	private int balance;
 	private int position;
+	private int numberOfRailroadsOwned;
+	private int mostRecentDiceRoll;
+	private boolean goingBackwards;
 	private ArrayList <String> properties;
 	
 	public Player(String n, String p, boolean j, int b, int po, ArrayList<String> pro)
@@ -66,6 +69,30 @@ public class Player {
 
 	public void setProperties(ArrayList<String> properties) {
 		this.properties = properties;
+	}
+
+	public int getNumberOfRailroadsOwned() {
+		return numberOfRailroadsOwned;
+	}
+
+	public void setNumberOfRailroadsOwned(int numberOfRailroadsOwned) {
+		this.numberOfRailroadsOwned = numberOfRailroadsOwned;
+	}
+
+	public int getMostRecentDiceRoll() {
+		return mostRecentDiceRoll;
+	}
+
+	public void setMostRecentDiceRoll(int mostRecentDiceRoll) {
+		this.mostRecentDiceRoll = mostRecentDiceRoll;
+	}
+
+	public boolean isGoingBackwards() {
+		return goingBackwards;
+	}
+
+	public void setGoingBackwards(boolean goingBackwards) {
+		this.goingBackwards = goingBackwards;
 	}
 	
 }

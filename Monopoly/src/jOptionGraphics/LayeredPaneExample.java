@@ -1,7 +1,7 @@
-package monopoly;
+package jOptionGraphics;
 import javax.swing.*;
 
-
+import objects.Piece;
 
 import java.awt.*;
 import java.util.Scanner;
