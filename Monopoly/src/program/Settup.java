@@ -37,7 +37,7 @@ public class Settup {
 		System.out.println("");
 		
 		//makePlayers
-		for(int i = 0; i < Data.numbOfPlayers-1; i++)
+		for(int i = 0; i < Data.numbOfPlayers; i++)
 		{
 			//getName
 			System.out.println("Welcome new Player!");
@@ -57,7 +57,6 @@ public class Settup {
 			piece = Data.pieces.get(pieceNumb);
 			Data.pieces.remove(pieceNumb);
 			//makeObject
-			Data.numbOfPlayers++;
 			Data.players.add(new Player(name, piece, false, 1500, 0, blank));
 			//displayPlayer
 			System.out.println("Welcome to Monopoly, " + name + "!");
@@ -66,7 +65,7 @@ public class Settup {
 		}
 		
 		//makeBoard
-		Data.board = Input_File.fillSpaceData(Data.files);
+		//Data.board = Input_File.fillSpaceData(Data.files);
 	}
 
 }
