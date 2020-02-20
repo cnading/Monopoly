@@ -7,7 +7,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import monopoly.*;
+import objects.*;
 
 public class Input_File {
 	static int numberOfFields = 4;
