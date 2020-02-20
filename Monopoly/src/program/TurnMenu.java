@@ -61,6 +61,9 @@ public class TurnMenu
 		}
 		//nextTurn
 		Data.turn++;
+		if(Data.turn >= Data.numbOfPlayers) {
+			Data.turn = 0;
+		}
 	}
 	public static void manageProperties() 
 	{
