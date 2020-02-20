@@ -7,16 +7,27 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import monopoly.*;
+import jOptionGraphics.*;
+import objects.Free_Parking;
+import objects.Go;
+import objects.Go_To_Jail;
+import objects.Income_Tax;
+import objects.Jail;
+import objects.Luck;
+import objects.Luxury_Tax;
+import objects.Property;
+import objects.Railroad;
+import objects.Space;
+import objects.Utility;
 
 public class Input_File {
 	static int numberOfFields = 4;
 	
 	public static Space[] fillSpaceData(String[] fileNames) throws Exception{
 		// fileNames are for Names, and Space Data
+		
 
-
-
+		
 
         // The name of the file to open.
 Space[] thisIsIt= new Space[40];
@@ -41,14 +52,7 @@ int counter = 0;
             	{
 				switch(i) {
 				case 0: 
-					String[] stoof = line.split(" ");
-					String namey = stoof[1];
-					if(stoof.length > 1) {
-					for(int k = 2; k < stoof.length; k++) {
-						namey += " " + stoof[k];
-					}
-					}
-				names[counter] = namey;
+				names[counter] = line.split(" ")[1];
 				break;
 				case 1: 
 					String infer[] = line.split(" ");
@@ -92,13 +96,13 @@ for(int i = 0; i < 40; i++) {
 switch(types[i]) {
 case "Property": 
 	int price = Integer.parseInt((String) info.get(i).get(0));
-	int[] someFees = new int[6];
-	for(int j = 1; j < 7; j++) {
+	int[] someFees = new int[5];
+	for(int j = 1; j < info.get(i).size(); j++) {
 		int data = Integer.parseInt((String) info.get(i).get(j));
 		someFees[j - 1] = data;
 	}
-	int housePrice = Integer.parseInt((String) info.get(i).get(7));
-	thisIsIt[i] = new Property(names[i], types[i], price, someFees, housePrice);
+	
+	thisIsIt[i] = new Property(names[i], types[i], price, someFees);
 	break;
 	
 	
@@ -109,7 +113,7 @@ case "Railroad":
 		int data = Integer.parseInt((String) info.get(i).get(j));
 		someFees2[j - 1] = data;
 	}
-
+	
 	thisIsIt[i] = new Railroad(names[i], types[i], price2, someFees2);
 	break;
 	
@@ -157,9 +161,13 @@ case "Go":
 	
 case "Utility": 
 	int price5 = Integer.parseInt((String) info.get(i).get(0));
+	int[] someFees5 = new int[1];
+	for(int j = 1; j < info.get(i).size(); j++) {
+		int data = Integer.parseInt((String) info.get(i).get(j));
+		someFees5[j - 1] = data;
+	}
 	
-	
-	thisIsIt[i] = new Utility(names[i], types[i], price5);
+	thisIsIt[i] = new Utility(names[i], types[i], price5, someFees5);
 	break;
 	default:
 		System.out.println("Something's wrong with the file.");

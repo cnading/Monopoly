@@ -1,14 +1,12 @@
-package monopoly;
+package objects;
 
-import objects.Player;
-
-public class Railroad extends Space{
+public class Utility extends Space{
 protected int cost;
 protected int[] fees;
 protected Player owner;
 
 
-	public Railroad(String theName, String theType, int theCost, int[] theFees) {
+	public Utility(String theName, String theType, int theCost, int[] theFees) {
 		type = theType;
 		name = theName;
 		cost = theCost;
@@ -33,12 +31,7 @@ protected Player owner;
 		return fees;
 	}
 	public int getFeeToPlayer() {
-		if(owner != null) {
-		return fees[owner.getNumberOfRailroadsOwned() -1];
-		}
-		else {
-			return 0;
-		}
+		return 0;
 	}
 
 	public void setFees(int[] fees) {

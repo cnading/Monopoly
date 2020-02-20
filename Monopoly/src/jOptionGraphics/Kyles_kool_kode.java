@@ -1,4 +1,4 @@
-package program;
+package jOptionGraphics;
 
 import java.awt.BorderLayout;
 import java.awt.Dimension;

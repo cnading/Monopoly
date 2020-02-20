@@ -1,6 +1,4 @@
-package monopoly;
-
-import objects.Player;
+package objects;
 
 public class Free_Parking extends Space{
 

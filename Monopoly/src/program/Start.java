@@ -2,9 +2,10 @@ package program;
 
 import java.util.Scanner;
 
-public class Introduction {
-	
-	public static void introToGame(){
+public class Start
+{
+
+	public static void start(){
 		System.out.println("Welcome to Monopoly -- The Fast Dealing, Property Trading Game.");
 		System.out.println("The Rules of Monopoly are not difficult, but they are highly specific.");
 		System.out.println("Are you ready?");
@@ -103,6 +104,5 @@ public class Introduction {
 		}
 		
 	}
-	
 	
 }

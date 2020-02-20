@@ -1,6 +1,4 @@
-package monopoly;
-
-import objects.Player;
+package objects;
 
 public class Jail extends Space{
 

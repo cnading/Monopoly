@@ -1,17 +1,15 @@
-package monopoly;
+package objects;
 
-import objects.Player;
-
-public class Income_Tax extends Space{
+public class Luxury_Tax extends Space{
 
 protected int[] fees;
 
 
 
-	public Income_Tax(String theName, String theType, int[] theFees) {
+	public Luxury_Tax(String theName, String theType, int[] theFees) {
 		type = theType;
 		name = theName;
-	fees = theFees;
+		fees = theFees;
 		
 		
 		
@@ -21,7 +19,7 @@ protected int[] fees;
 		return fees;
 	}
 	public int getFeeToPlayer() {
-return 0;
+return fees[0];
 	}
 
 	public void setFees(int[] fees) {
