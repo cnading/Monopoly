@@ -12,5 +12,5 @@ public class Data
 	static Space[] board;// = new Space[40];
 	static ArrayList<Player> players = new ArrayList<Player>();
 	static ArrayList<String> pieces = new ArrayList<String>();
-	static String[] files = new String[]{};
+	static String[] files = {"ThemeData", "SpaceData"};
 }
