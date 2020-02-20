@@ -6,12 +6,13 @@ public class Start
 {
 
 	public static void start(){
-		System.out.println("Welcome to Monopoly -- The Fast Dealing, Property Trading Game.");
+		System.out.println("Without futher adue, here is facinating game of text based Monopoly -- The Fast Dealing, Property Trading Game.");
 		System.out.println("The Rules of Monopoly are not difficult, but they are highly specific.");
 		System.out.println("Are you ready?");
 		
 		System.out.println("Here are some simple facts to get started...");
 		System.out.println("There are 32 houses, 12 hotels, Chance and Community Chest Cards, Title Deeds for each property, money, property and player tokens.");
+		System.out.println("");
 		
 	}
 	
@@ -78,6 +79,7 @@ public class Start
 			System.out.println();
 			System.out.println("If your piece lands on 'Free Parking', you will start to go around the board in the direction opposite to where you were going");
 			System.out.println("If you land on it again, then you will proceed to go the opposite direction again");
+			System.out.println("");
 			
 			
 		}
@@ -94,11 +96,13 @@ public class Start
 			System.out.println("You chose to end the game, and tally the total worth of each player (including buildings and all property worth)");
 			System.out.println();
 			System.out.println("Official rules state that the last player in the game, or the player with the most money wins.");
+			System.out.println("");
 		}
 		
 		else {
 			isMakingChoice = false;
 			System.out.println("I'm sorry, that wasn't an option, try again.");
+			System.out.println("");
 		}
 		
 		}

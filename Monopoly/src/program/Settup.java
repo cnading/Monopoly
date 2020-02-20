@@ -40,7 +40,7 @@ public class Settup {
 		for(int i = 0; i < Data.numbOfPlayers; i++)
 		{
 			//getName
-			System.out.println("Welcome new Player!");
+			System.out.println("Sup new player!");
 			System.out.println("Enter your name.");
 			System.out.print("Input:");
 			name = strInput.nextLine();
@@ -59,8 +59,8 @@ public class Settup {
 			//makeObject
 			Data.players.add(new Player(name, piece, false, 1500, 0, blank));
 			//displayPlayer
-			System.out.println("Welcome to Monopoly, " + name + "!");
-			System.out.println("You are the " + piece + " piece.");
+			System.out.println("Welcome to Monopoly, " + Data.players.get(i).getName() + "!");
+			System.out.println("You are the " + Data.players.get(i).getPiece() + " piece.");
 			System.out.println("");
 		}
 		

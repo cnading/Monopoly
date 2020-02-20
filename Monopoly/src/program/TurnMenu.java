@@ -13,7 +13,7 @@ public class TurnMenu
 		System.out.println(Data.players.get(Data.turn).getPiece() + "'s turn!");
 		System.out.println("Select what you would like to do.");
 		System.out.println("(1) Roll Dice");
-		System.out.println("(1) Manage Properties");
+		System.out.println("(2) Manage Properties");
 		System.out.print("Input:");
 		choice = intInput.nextInt();
 		//action
@@ -50,8 +50,8 @@ public class TurnMenu
 		TextGraphics.fillBoard();
 		TextGraphics.displayBoard();*/
 		//action
-		System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
-		Data.board[Data.players.get(Data.turn).getPosition()].action();
+		/*System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
+		Data.board[Data.players.get(Data.turn).getPosition()].action();*/
 		//loseGame?
 		if(Data.players.get(Data.turn).getBalance() < 0)
 		{
