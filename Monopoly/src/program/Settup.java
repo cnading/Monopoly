@@ -5,7 +5,6 @@ import java.util.Scanner;
 import objects.*;
 
 public class Settup {
-
 	public static void settup() throws Exception 
 	{
 		//var
@@ -67,5 +66,4 @@ public class Settup {
 		//makeBoard
 		//Data.board = Input_File.fillSpaceData(Data.files); //Fix this!!! Setup the files array properly in Data.
 	}
-
 }
