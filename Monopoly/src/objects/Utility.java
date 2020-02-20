@@ -1,16 +1,17 @@
 package objects;
 
+
 public class Utility extends Space{
 protected int cost;
 protected int[] fees;
 protected Player owner;
 
 
-	public Utility(String theName, String theType, int theCost, int[] theFees) {
+	public Utility(String theName, String theType, int theCost) {
 		type = theType;
 		name = theName;
 		cost = theCost;
-		fees = theFees;
+		
 		
 		
 		
