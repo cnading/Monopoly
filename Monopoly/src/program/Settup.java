@@ -65,7 +65,7 @@ public class Settup {
 		}
 		
 		//makeBoard
-		//Data.board = Input_File.fillSpaceData(Data.files);
+		//Data.board = Input_File.fillSpaceData(Data.files); //Fix this!!! Setup the files array properly in Data.
 	}
 
 }

@@ -13,7 +13,7 @@ public class MonopolyRunner
 		Settup.settup(); //ask numb of players and make players, make other objects
 		Start.start(); //welcome to game
 		Start.rules(); //display rules if wanted
-		while(players.size() > 1)
+		while(Data.numbOfPlayers > 1)
 		{
 			TurnMenu.turnMenu(); //players turn
 		}

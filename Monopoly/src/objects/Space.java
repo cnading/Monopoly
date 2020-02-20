@@ -3,7 +3,7 @@ package objects;
 public abstract class Space {
 	protected String name;
 	protected String type;
-	protected abstract void action();
+	public abstract void action();
 	public String getName() {
 		return name;
 	}
