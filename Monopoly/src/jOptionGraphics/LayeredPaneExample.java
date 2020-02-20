@@ -1,4 +1,4 @@
-package program;
+package jOptionGraphics;
 import javax.swing.*;
 
 import objects.Piece;

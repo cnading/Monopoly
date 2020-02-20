@@ -1,14 +1,14 @@
-package monopoly;
+package objects;
 
-import objects.Player;
-
-public class Utility extends Space{
+public class Property extends Space{
 protected int cost;
 protected int[] fees;
+protected int houses;
+protected int hotels;
 protected Player owner;
 
 
-	public Utility(String theName, String theType, int theCost, int[] theFees) {
+	public Property(String theName, String theType, int theCost, int[] theFees) {
 		type = theType;
 		name = theName;
 		cost = theCost;
@@ -33,11 +33,37 @@ protected Player owner;
 		return fees;
 	}
 	public int getFeeToPlayer() {
-		return 0;
+		if(hotels == 1) {
+			return fees[5];
+		}
+		else{
+			return fees[houses];
+		}
+
 	}
 
 	public void setFees(int[] fees) {
 		this.fees = fees;
+	}
+
+
+	public int getHouses() {
+		return houses;
+	}
+
+
+	public void setHouses(int houses) {
+		this.houses = houses;
+	}
+
+
+	public int getHotels() {
+		return hotels;
+	}
+
+
+	public void setHotels(int hotels) {
+		this.hotels = hotels;
 	}
 
 

@@ -7,7 +7,18 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import monopoly.*;
+import jOptionGraphics.*;
+import objects.Free_Parking;
+import objects.Go;
+import objects.Go_To_Jail;
+import objects.Income_Tax;
+import objects.Jail;
+import objects.Luck;
+import objects.Luxury_Tax;
+import objects.Property;
+import objects.Railroad;
+import objects.Space;
+import objects.Utility;
 
 public class Input_File {
 	static int numberOfFields = 4;

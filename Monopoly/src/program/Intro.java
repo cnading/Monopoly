@@ -1,6 +1,8 @@
 package program;
 
-public class Intro
-	{
+import java.util.Scanner;
 
-	}
+public class Intro 
+{
+	
+}

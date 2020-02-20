@@ -1,4 +1,4 @@
-package monopoly;
+package objects;
 
 public abstract class Space {
 	protected String name;

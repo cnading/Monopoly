@@ -2,9 +2,9 @@ package program;
 
 import java.util.Scanner;
 
-public class Setup {
+public class Settup {
 
-	public static void main(String[] args) {
+	public static void settup(String[] args) {
 		// TODO set up all we need in terms of players and characters
 		//Asking number of players
 		//Establishing characters for each of the players
