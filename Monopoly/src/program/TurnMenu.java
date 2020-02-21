@@ -30,7 +30,7 @@ public class TurnMenu
 	public static void rollDice()
 	{
 		//var
-		int roll = (int) ((Math.random()+1*6) + (Math.random()+1*6));
+		int roll = (int) ((Math.random()*6+1) + (Math.random()*6+1));
 		Scanner strInput = new Scanner(System.in);
 		//rollDice
 		System.out.println("Press enter to roll the dice.");
@@ -46,7 +46,7 @@ public class TurnMenu
 			Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()-roll);
 		}
 		//displayBoard
-		TextGraphics.wipeBoard();
+		TextGraphics.setBoardLoc();
 		TextGraphics.fillBoard();
 		TextGraphics.displayBoard();
 		//action
