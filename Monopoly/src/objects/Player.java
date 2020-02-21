@@ -60,7 +60,12 @@ public class Player {
 	}
 
 	public void setPosition(int position) {
-		this.position = position;
+if(position>=0) {
+		this.position = position%41;
+}
+else {
+	this.position = position + 41;
+}
 	}
 
 	public ArrayList<String> getProperties() {

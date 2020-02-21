@@ -64,6 +64,8 @@ public class Settup {
 		}
 		
 		//makeBoard
-		Data.board = Input_File.fillSpaceData(Data.files); //Fix this!!! Setup the files array properly in Data.
+		Data.board = Input_File.fillSpaceData(Data.files); 
+		Data.chestStack = Input_File.fillChestCards("CommunityChestCards", true);
+		Data.chestStack = Input_File.fillChestCards("ChanceCards", false);
 	}
 }
