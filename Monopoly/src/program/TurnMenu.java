@@ -46,9 +46,9 @@ public class TurnMenu
 			Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()-roll);
 		}
 		//displayBoard
-		/*TextGraphics.wipeBoard();
+		TextGraphics.wipeBoard();
 		TextGraphics.fillBoard();
-		TextGraphics.displayBoard();*/
+		TextGraphics.displayBoard();
 		//action
 		System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
 		Data.board[Data.players.get(Data.turn).getPosition()].action();
