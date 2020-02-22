@@ -37,7 +37,7 @@ return 0;
 			cost = mayb;
 		}
 		p.setBalance(p.getBalance() - cost);
-		
+		Data.players.set(Data.turn, p);
 	}
 
 

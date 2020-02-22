@@ -20,5 +20,7 @@ public class Data
 	public static String[] files = {"ThemeData", "SpaceData"};
 	public static String [] l;
 	public static String[][] textBoard;
-	
+	public static boolean rolledDoubles;
+	public static int doubleCounter;
+	public static boolean goodToGo;
 }

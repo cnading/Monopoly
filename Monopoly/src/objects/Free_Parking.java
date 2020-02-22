@@ -21,7 +21,7 @@ public class Free_Parking extends Space{
 		p.setBalance(p.getBalance() + Data.moneyPile);
 		Data.moneyPile = 0;
 		p.setGoingBackwards(true);
-		
+		Data.players.set(Data.turn, p);
 	}
 
 
