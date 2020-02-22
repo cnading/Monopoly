@@ -14,8 +14,19 @@ public class Player {
 	private int numberOfUtilitiesOwned;
 	private int outOfJailCounter;
 	private boolean goodToGo;
+	private int getOutOfJailFreeCards;
+	private int numberOfHouses;
+	private int numberOfHotels;
 	public boolean isGoodToGo() {
 		return goodToGo;
+	}
+
+	public int getGetOutOfJailFreeCards() {
+		return getOutOfJailFreeCards;
+	}
+
+	public void setGetOutOfJailFreeCards(int getOutOfJailFreeCards) {
+		this.getOutOfJailFreeCards = getOutOfJailFreeCards;
 	}
 
 	public void setGoodToGo(boolean goodToGo) {
@@ -139,6 +150,22 @@ else {
 	public void setGoingBackwards(boolean goingBackwards) {
 		this.goingBackwards = goingBackwards;
 	}
+	public int getNumberOfHouses() {
+		return numberOfHouses;
+	}
+
+	public void setNumberOfHouses(int numberOfHouses) {
+		this.numberOfHouses = numberOfHouses;
+	}
+
+	public int getNumberOfHotels() {
+		return numberOfHotels;
+	}
+
+	public void setNumberOfHotels(int numberOfHotels) {
+		this.numberOfHotels = numberOfHotels;
+	}
+
 	public void addProperty(Space p) {
 		this.properties.add(p);
 	}

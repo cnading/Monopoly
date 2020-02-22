@@ -73,384 +73,446 @@ public class Settup {
 		LuckyLuhny l;
 		// 1.
 		l = (Player p) -> {
-			
-			
+			p.setPosition(40);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 2.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 200);
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 3.	
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() - 50);
+			Data.moneyPile += 50;
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 4.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 50);
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 5.	
 		l = (Player p) -> {
-			
-			
+			p.setGetOutOfJailFreeCards(p.getGetOutOfJailFreeCards() + 1);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 6.
 		l = (Player p) -> {
-			
-			
+			p.setPosition(10);
+			p.setJail(true);
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 7.	
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + (Data.numbOfPlayers - 1) * 50);
+			for(int i = 0; i < Data.players.size(); i++) {
+				if(i != Data.turn) {
+					Data.players.get(i).setBalance(Data.players.get(i).getBalance() - 50);
+				}
+			}
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 8.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 150);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 9.			
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 20);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 10.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 10);
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 11.	
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 100);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 12.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() - 100);
+			Data.moneyPile += 100;
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 13.	
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() - 150);
+			Data.moneyPile += 150;
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 14.
 		l = (Player p) -> {
+			p.setBalance(p.getBalance() + 25);
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 15.	
 		l = (Player p) -> {
-			
-			
+			int costy = p.getNumberOfHouses() * 40 + p.getNumberOfHotels() * 115;
+			p.setBalance(p.getBalance() - costy);
+			Data.moneyPile += costy;
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 16.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 10);
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 17.
 		l = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 10);
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 18.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 19.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 20.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 21.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 22.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 23.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 24.		
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 26.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 27.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 28.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 29.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 30.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);	
 		// 31.	
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		// 32.
 		l = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chestCardMethods.add(l);
 		
-	//Community Chest Card methods:
+	//Chance Card methods:
 	
 		LuckyLuhny m;
 		// 1.
 		m = (Player p) -> {
-					
-					
+			p.setPosition(40);
+			return p;		
 		};
 		Data.chanceCardMethods.add(m);	
 		// 2.	
 		m = (Player p) -> {
-			
-			
+			if(p.getPosition() < 23) {
+				p.setPosition(23);
+			}else {
+			p.setPosition(63);
+			}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);		
 		// 3.
 		m = (Player p) -> {
-			
-			
+			if(p.getPosition() < 11) {
+				p.setPosition(11);
+			}else {
+			p.setPosition(51);
+			}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);		
 		// 4.
 		m = (Player p) -> {
-			
-			
+			int pos = p.getPosition();
+			if(pos > 27) {
+				p.setPosition(52);
+			}else if (pos < 12) {
+				p.setPosition(12);
+			}
+			else {
+				p.setPosition(28);
+			}
+
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 5.	
 		m = (Player p) -> {
-			
-			
+			int pos = p.getPosition();
+			if(pos > 34) {
+				p.setPosition(45);
+			}
+			else if (pos < 5) {
+				p.setPosition(5);
+			}
+			else if(pos > 4 && pos < 15){
+				p.setPosition(15);
+			}
+			else if(pos > 14 && pos < 25){
+				p.setPosition(25);
+			}
+			else if(pos > 24 && pos < 35){
+				p.setPosition(35);
+			}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);
 		// 6.		
 		m = (Player p) -> {
+			p.setBalance(p.getBalance() + 100);
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 7.	
 		m = (Player p) -> {
-			
-			
+			p.setGetOutOfJailFreeCards(p.getGetOutOfJailFreeCards() + 1);
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 8.	
 		m = (Player p) -> {
-			
-			
+			p.setPosition(p.getPosition() - 3);
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 9.	
 		m = (Player p) -> {
-			
-			
+			p.setPosition(10);
+			p.setJail(true);
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 10.	
 		m = (Player p) -> {
-			
-			
+			int costy = p.getNumberOfHouses() * 25 + p.getNumberOfHotels() * 100;
+			p.setBalance(p.getBalance() - costy);
+			Data.moneyPile += costy;
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 11.	
 		m = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() - 15);
+			Data.moneyPile += 15;
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 12.	
 		m = (Player p) -> {
-			
-			
+			if(p.getPosition() < 5) {
+				p.setPosition(5);
+			}else {
+			p.setPosition(45);
+			}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 13.	
 		m = (Player p) -> {
-			
-			
+			if(p.getPosition() < 39) {
+				p.setPosition(39);
+			}else {
+			p.setPosition(79);
+			}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 14.	
 		m = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() - (Data.numbOfPlayers - 1) * 50);
+			for(int i = 0; i < Data.players.size(); i++) {
+				if(i != Data.turn) {
+					Data.players.get(i).setBalance(Data.players.get(i).getBalance() + 50);
+				}
+				}
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 15.	
 		m = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 150);
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 16.	
 		m = (Player p) -> {
-			
-			
+			p.setBalance(p.getBalance() + 100);
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 17.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 18.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 19.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 20.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 21.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 22.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 23.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 24.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 25.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 26.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 27.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);
 		// 28.		
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 29.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 30.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 31.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);	
 		// 32.	
 		m = (Player p) -> {
 			
-			
+			return p;
 		};
 		Data.chanceCardMethods.add(m);		
 		

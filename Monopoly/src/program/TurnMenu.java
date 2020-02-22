@@ -93,7 +93,20 @@ if(MonopolyRunner.testRollMode) {
 			{
 				Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()-roll);
 			}
-		}else {
+		}
+		else if(Data.players.get(Data.turn).getGetOutOfJailFreeCards() > 0) {
+			System.out.println("You used your get out of Jail Free Card!");
+			Data.players.get(Data.turn).setGetOutOfJailFreeCards(Data.players.get(Data.turn).getGetOutOfJailFreeCards() -1);
+			if(Data.players.get(Data.turn).isGoingBackwards() == false)
+			{
+				Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()+roll);
+			}
+			else
+			{
+				Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()-roll);
+			}
+		}
+		else {
 
 			Data.players.get(Data.turn).setOutOfJailCounter(Data.players.get(Data.turn).getOutOfJailCounter() + 1);
 			if(Data.players.get(Data.turn).getOutOfJailCounter() > 2) {

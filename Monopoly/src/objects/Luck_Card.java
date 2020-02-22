@@ -15,10 +15,12 @@ active = true;
 	
 	public void theAction(boolean chestNotChance) {
 		if(chestNotChance) {
-		Data.chestCardMethods.get(placeInList).theMethod(Data.players.get(Data.turn));
+		Player p = Data.chestCardMethods.get(placeInList).theMethod(Data.players.get(Data.turn));
+		Data.players.set(Data.turn,  p);
 		}
 		else {
-		Data.chanceCardMethods.get(placeInList).theMethod(Data.players.get(Data.turn));	
+		Player p = Data.chanceCardMethods.get(placeInList).theMethod(Data.players.get(Data.turn));
+		Data.players.set(Data.turn,  p);
 		}
 	}
 	
