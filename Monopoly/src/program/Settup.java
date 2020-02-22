@@ -31,7 +31,7 @@ public class Settup {
 		//getPlayerCount
         System.out.println("Ideally you need between 2-8 people, how many people are in your party?");
 		System.out.println("Please enter the number of players for the game...");
-		System.out.print("Input:");
+		System.out.print("Input: ");
 		Data.numbOfPlayers = intInput.nextInt();
 		System.out.println("");
 		
@@ -41,7 +41,7 @@ public class Settup {
 			//getName
 			System.out.println("Sup new player!");
 			System.out.println("Enter your name.");
-			System.out.print("Input:");
+			System.out.print("Input: ");
 			name = strInput.nextLine();
 			//getPiece
 			System.out.println("Select a piece from the list below.");
@@ -51,7 +51,7 @@ public class Settup {
 				count++;
 			}
 			count = 1;
-			System.out.print("Input:");
+			System.out.print("Input: ");
 			pieceNumb = intInput.nextInt()-1;
 			piece = Data.pieces.get(pieceNumb);
 			Data.pieces.remove(pieceNumb);
