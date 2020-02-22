@@ -22,5 +22,6 @@ public class Data
 	public static String[][] textBoard;
 	public static boolean rolledDoubles;
 	public static int doubleCounter;
-	
+	public static boolean goodToGo;
+
 }
