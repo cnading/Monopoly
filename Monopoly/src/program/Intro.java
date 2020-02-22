@@ -15,6 +15,7 @@ public class Intro
 		System.out.println("Its just like regular Monoploy without the fun!");
 		System.out.println();
 		System.out.println("Would you like to play? Y or N.");
+		System.out.print("Input: ");
 		yOrN = strInput.nextLine().toLowerCase();
 		
 		//action

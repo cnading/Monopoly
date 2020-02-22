@@ -21,11 +21,12 @@ public class Start
 		
 		while(isMakingChoice) {
 		System.out.println("Would you like the rules of the game?");
+		System.out.println("Please enter either 1 or 2.");
 		System.out.println("(1) Yes Please!");
 		System.out.println("(2) No Thanks, I'm Already a Pro");
 		
 		Scanner intInput = new Scanner(System.in);
-		System.out.println("Please enter either 1 or 2.");
+		System.out.print("Input: ");
 		int choice = intInput.nextInt();
 		
 		if(choice == 1){
