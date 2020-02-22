@@ -123,7 +123,7 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 		
 	
 	Player p2 = Data.players.get(owner);
-	System.out.println(p2.getName() + " owns this property");
+	System.out.println(p2.getName() + " owns this property.");
 	int theFee = fees[houses];
 	System.out.println("You owe $" + theFee + ".");
 	p.setBalance(p.getBalance() - theFee);

@@ -15,7 +15,8 @@ public class TurnMenu
 		int choice;
 		Scanner intInput = new Scanner(System.in);
 		//selectOption
-		System.out.println(Data.players.get(Data.turn).getName() + "'s" + " (" + Data.players.get(Data.turn).getPiece() +  ") turn! Balance: " + Data.players.get(Data.turn).getBalance());
+		System.out.println();
+		System.out.println(Data.players.get(Data.turn).getName() + "'s" + " (" + Data.players.get(Data.turn).getPiece() +  ") turn! Balance: $" + Data.players.get(Data.turn).getBalance());
 		System.out.println("Select what you would like to do.");
 		System.out.println("(1) Roll Dice");
 		System.out.println("(2) Manage Properties");
@@ -85,6 +86,8 @@ if(MonopolyRunner.testRollMode) {
 		}
 		}else if (Data.rolledDoubles) {
 			System.out.println("You rolled doubles and got out of Jail!");
+			Data.players.get(Data.turn).setOutOfJailCounter(0);
+			Data.players.get(Data.turn).setJail(false);
 			if(Data.players.get(Data.turn).isGoingBackwards() == false)
 			{
 				Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()+roll);
@@ -96,6 +99,8 @@ if(MonopolyRunner.testRollMode) {
 		}
 		else if(Data.players.get(Data.turn).getGetOutOfJailFreeCards() > 0) {
 			System.out.println("You used your get out of Jail Free Card!");
+			Data.players.get(Data.turn).setOutOfJailCounter(0);
+			Data.players.get(Data.turn).setJail(false);
 			Data.players.get(Data.turn).setGetOutOfJailFreeCards(Data.players.get(Data.turn).getGetOutOfJailFreeCards() -1);
 			if(Data.players.get(Data.turn).isGoingBackwards() == false)
 			{
@@ -111,6 +116,7 @@ if(MonopolyRunner.testRollMode) {
 			Data.players.get(Data.turn).setOutOfJailCounter(Data.players.get(Data.turn).getOutOfJailCounter() + 1);
 			if(Data.players.get(Data.turn).getOutOfJailCounter() > 2) {
 				Data.players.get(Data.turn).setOutOfJailCounter(0);
+				Data.players.get(Data.turn).setJail(false);
 				System.out.println("You've served your sentence.");
 				if(Data.players.get(Data.turn).isGoingBackwards() == false)
 				{
@@ -170,14 +176,18 @@ if(MonopolyRunner.testRollMode) {
 		if(choice == 1)
 		{
 			System.out.print("Properties:");
-			for(Space p: Data.players.get(Data.turn).getProperties())
-			{
-				System.out.print(" \"" + p.getName() + "\"");
-			}
+			
 			if(Data.players.get(Data.turn).getProperties().size() == 0)
 			{
 				System.out.println(" none");
+			}else {
+				for(Space p: Data.players.get(Data.turn).getProperties())
+				{
+					
+					System.out.print(" \"" + p.getName() + "\"");
+				}
 			}
+			
 			System.out.println("");
 		}
 		if(choice == 2)
