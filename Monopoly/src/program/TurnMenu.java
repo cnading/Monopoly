@@ -119,7 +119,6 @@ if(MonopolyRunner.testRollMode) {
 		if(! Data.rolledDoubles) {
 		Data.turn++;
 		Data.doubleCounter = 0;
-		
 		if(Data.turn >= Data.numbOfPlayers) {
 			Data.turn = 0;
 		}
