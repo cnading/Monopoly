@@ -2,6 +2,8 @@ package objects;
 
 import java.util.ArrayList;
 
+import program.Data;
+
 public class Player {
 	private String name;
 	private String piece;
@@ -10,6 +12,24 @@ public class Player {
 	private int position;
 	private int numberOfRailroadsOwned;
 	private int numberOfUtilitiesOwned;
+	private int outOfJailCounter;
+	private boolean goodToGo;
+	public boolean isGoodToGo() {
+		return goodToGo;
+	}
+
+	public void setGoodToGo(boolean goodToGo) {
+		this.goodToGo = goodToGo;
+	}
+
+	public int getOutOfJailCounter() {
+		return outOfJailCounter;
+	}
+
+	public void setOutOfJailCounter(int outOfJailCounter) {
+		this.outOfJailCounter = outOfJailCounter;
+	}
+
 	public int getNumberOfUtilitiesOwned() {
 		return numberOfUtilitiesOwned;
 	}
@@ -70,12 +90,22 @@ public class Player {
 	}
 
 	public void setPosition(int position) {
-if(position>=0) {
-		this.position = position%41;
+		
+		
+if(position>=39) {
+	System.out.println("You passed Go, collect $200");
+	setBalance(getBalance() + 200);
+		this.position = position%40;
+}
+else if(position < 0){
+	System.out.println("You passed Go, collect $200");
+	setBalance(getBalance() + 200);
+	this.position = position + 40;
 }
 else {
-	this.position = position + 41;
+	this.position = position;
 }
+
 	}
 
 	public ArrayList<Space> getProperties() {

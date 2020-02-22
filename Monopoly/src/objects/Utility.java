@@ -100,8 +100,9 @@ protected int owner;
 	p.setBalance(p.getBalance() - theFee);
 	p2.setBalance(p2.getBalance() + theFee);
 	System.out.println();
+	Data.players.set(owner, p2);
 	}
-	
+	Data.players.set(Data.turn, p);
 		
 	}
 

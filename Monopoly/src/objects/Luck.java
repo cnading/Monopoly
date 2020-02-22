@@ -30,7 +30,7 @@ public class Luck extends Space{
 		System.out.println("You've drawn the card \"" + lc.getName() + "\"");
 		lc.theAction(true);
 		}
-		
+		Data.players.set(Data.turn, p);
 		
 	}
 
