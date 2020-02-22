@@ -18,6 +18,7 @@ public class Player {
 	private int getOutOfJailFreeCards;
 	private int numberOfHouses;
 	private int numberOfHotels;
+	private boolean votedToEndGame;
 	public boolean isGoodToGo() {
 		return goodToGo;
 	}
@@ -176,6 +177,14 @@ if(goodToGo) {
 
 	public void setNumberOfHotels(int numberOfHotels) {
 		this.numberOfHotels = numberOfHotels;
+	}
+
+	public boolean isVotedToEndGame() {
+		return votedToEndGame;
+	}
+
+	public void setVotedToEndGame(boolean votedToEndGame) {
+		this.votedToEndGame = votedToEndGame;
 	}
 
 	public void addProperty(Space p) {

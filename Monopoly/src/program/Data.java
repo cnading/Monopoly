@@ -22,6 +22,7 @@ public class Data
 	public static String[][] textBoard;
 	public static boolean rolledDoubles;
 	public static int doubleCounter;
+	public static int votesToEndGame;
 	public static boolean goodToGo;
 
 }

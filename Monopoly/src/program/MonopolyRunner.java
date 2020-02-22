@@ -7,7 +7,7 @@ import objects.Space;
 
 public class MonopolyRunner
 {
-	static boolean testRollMode = true;;
+	static boolean testRollMode = false;
 	static int testingRoll = 30;
 	public static void main(String[] args) throws Exception
 	{

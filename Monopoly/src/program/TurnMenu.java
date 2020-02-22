@@ -21,8 +21,10 @@ public class TurnMenu
 		System.out.println("(1) Roll Dice");
 		System.out.println("(2) Manage Properties");
 		System.out.println("(3) Use Cards");
+		System.out.println("(4) Vote To End Game");
 		System.out.print("Input: ");
 		choice = intInput.nextInt();
+		System.out.println();
 		//action
 		if(choice == 1)
 		{
@@ -36,8 +38,14 @@ public class TurnMenu
 		{
 			useCards();
 		}
+		else if(choice == 4)
+		{
+			endGame();
+		}
 	}
 	
+	
+
 	public static void rollDice()
 	{
 		//var
@@ -207,5 +215,32 @@ public class TurnMenu
 	{
 		System.out.println("Nothing here yet!"); //add list of cards, and the ability to run their actions
 		System.out.println("");
+	}
+	public static void endGame() {
+		if( ! Data.players.get(Data.turn).isVotedToEndGame()) {
+			Data.votesToEndGame ++;
+			Data.players.get(Data.turn).setVotedToEndGame(true);;
+		}
+		System.out.print("You've voted to end the game. Votes " + Data.votesToEndGame + "/" + Data.numbOfPlayers);
+		System.out.println();
+		
+		if(Data.votesToEndGame >= Data.numbOfPlayers) {
+		reallyEndTheGame();
+			
+		}
+		
+	}
+	public static void reallyEndTheGame() {
+		int max = 0; 
+		Player pe = null;
+		for(Player p: Data.players) {
+			if(p.getBalance() > max) {
+			pe = p;	
+			}
+		}
+		System.out.println();
+		System.out.println(pe.getName() + " (" + pe.getPiece() + ") has won the game with $" + pe.getBalance() + "!!!");
+		System.out.println("Thanks for playing.");
+		System.exit(0);
 	}
 }

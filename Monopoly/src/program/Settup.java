@@ -338,7 +338,7 @@ public class Settup {
 		Data.chanceCardMethods.add(m);
 		// 6.		
 		m = (Player p) -> {
-			p.setBalance(p.getBalance() + 100);
+			p.setBalance(p.getBalance() + 50);
 			
 			return p;
 		};
