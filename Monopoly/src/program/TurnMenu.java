@@ -95,7 +95,7 @@ public class TurnMenu
 			System.out.print("Properties:");
 			for(Space p: Data.players.get(Data.turn).getProperties())
 			{
-				System.out.print(" \"" + p + "\"");
+				System.out.print(" \"" + p.getName() + "\"");
 			}
 			if(Data.players.get(Data.turn).getProperties().size() == 0)
 			{
