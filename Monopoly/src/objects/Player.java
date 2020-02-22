@@ -3,6 +3,7 @@ package objects;
 import java.util.ArrayList;
 
 import program.Data;
+import program.TextGraphics;
 
 public class Player {
 	private String name;
@@ -103,7 +104,7 @@ public class Player {
 	public void setPosition(int position) {
 		
 		
-if(position>=39) {
+if(position>=40) {
 	System.out.println("You passed Go, collect $200");
 	setBalance(getBalance() + 200);
 		this.position = position%40;
@@ -117,6 +118,17 @@ else {
 	this.position = position;
 }
 
+
+// moved stuff
+
+if(goodToGo) {
+	TextGraphics.setBoardLoc();
+	TextGraphics.fillBoard();
+	TextGraphics.displayBoard();
+	//action
+	System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
+	Data.board[Data.players.get(Data.turn).getPosition()].action();
+	}
 	}
 
 	public ArrayList<Space> getProperties() {

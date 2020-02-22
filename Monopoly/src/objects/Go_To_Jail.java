@@ -19,8 +19,10 @@ public class Go_To_Jail extends Space{
 	public void action() {
 		System.out.println("Go To Jail!");
 		Player p = Data.players.get(Data.turn);
+		p.setGoodToGo(false);
 		p.setPosition(10);
 		p.setJail(true);
+		
 		Data.players.set(Data.turn, p);
 		
 	}

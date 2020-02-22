@@ -104,6 +104,7 @@ public class Settup {
 		Data.chestCardMethods.add(l);
 		// 6.
 		l = (Player p) -> {
+			p.setGoodToGo(false);
 			p.setPosition(10);
 			p.setJail(true);
 			return p;
@@ -356,6 +357,7 @@ public class Settup {
 		Data.chanceCardMethods.add(m);	
 		// 9.	
 		m = (Player p) -> {
+			p.setGoodToGo(false);
 			p.setPosition(10);
 			p.setJail(true);
 			return p;

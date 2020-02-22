@@ -47,10 +47,14 @@ public class TurnMenu
 		Data.rolledDoubles = roll1 == roll2;
 		Data.players.get(Data.turn).setGoodToGo(true);
 		int roll = roll1 + roll2;
+		if(MonopolyRunner.testRollMode) {
+			roll = MonopolyRunner.testingRoll;
+		}
     Scanner strInput = new Scanner(System.in);
 		//rollDice
 		System.out.print("Press enter to roll the dice.");
 		strInput.nextLine();
+		System.out.println();
     System.out.println("You rolled a " + roll + ".");
 		Data.players.get(Data.turn).setMostRecentDiceRoll(roll);
 		if(Data.rolledDoubles) {
@@ -62,12 +66,12 @@ public class TurnMenu
 			Data.doubleCounter = 0;
 			System.out.println("You rolled doubles three times in a row!");
 			System.out.println("Go To Jail!");
+			Data.players.get(Data.turn).setGoodToGo(false);
 			Data.players.get(Data.turn).setPosition(10);
 			Data.players.get(Data.turn).setJail(true);
+			
 		}
-if(MonopolyRunner.testRollMode) {
-	roll = MonopolyRunner.testingRoll;
-}
+
 
 		
 		
@@ -133,14 +137,8 @@ if(MonopolyRunner.testRollMode) {
 			}
 		}
 		//displayBoard
-		if(Data.players.get(Data.turn).isGoodToGo()) {
-		TextGraphics.setBoardLoc();
-		TextGraphics.fillBoard();
-		TextGraphics.displayBoard();
-		//action
-		System.out.println("You landed on " + Data.board[Data.players.get(Data.turn).getPosition()].getName() + ".");
-		Data.board[Data.players.get(Data.turn).getPosition()].action();
-		}
+		// I moved this to set Position in Player object
+		
 		if(Data.players.get(Data.turn).getBalance() < 0)
 		{
 			System.out.println("You lose! You're out of the game. Haha, loser!");
