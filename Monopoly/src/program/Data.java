@@ -23,4 +23,5 @@ public class Data
 	public static boolean rolledDoubles;
 	public static int doubleCounter;
 	public static boolean goodToGo;
+
 }
