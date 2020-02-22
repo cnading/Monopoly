@@ -15,7 +15,7 @@ public class TurnMenu
 		int choice;
 		Scanner intInput = new Scanner(System.in);
 		//selectOption
-		System.out.println(Data.players.get(Data.turn).getName() + "'s" + " (" + Data.players.get(Data.turn).getPiece() +  ") turn! Ballance: " + Data.players.get(Data.turn).getBalance());
+		System.out.println(Data.players.get(Data.turn).getName() + "'s" + " (" + Data.players.get(Data.turn).getPiece() +  ") turn! Balance: " + Data.players.get(Data.turn).getBalance());
 		System.out.println("Select what you would like to do.");
 		System.out.println("(1) Roll Dice");
 		System.out.println("(2) Manage Properties");
