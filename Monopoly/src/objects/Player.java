@@ -9,11 +9,19 @@ public class Player {
 	private int balance;
 	private int position;
 	private int numberOfRailroadsOwned;
+	private int numberOfUtilitiesOwned;
+	public int getNumberOfUtilitiesOwned() {
+		return numberOfUtilitiesOwned;
+	}
+
+	public void setNumberOfUtilitiesOwned(int numberOfUtilitiesOwned) {
+		this.numberOfUtilitiesOwned = numberOfUtilitiesOwned;
+	}
 	private int mostRecentDiceRoll;
 	private boolean goingBackwards;
-	private ArrayList <String> properties;
+	private ArrayList <Property> properties;
 	
-	public Player(String n, String p, boolean j, int b, int po, ArrayList<String> pro)
+	public Player(String n, String p, boolean j, int b, int po, ArrayList<Property> pro)
 	{
 		name = n;
 		piece = p;
@@ -52,6 +60,8 @@ public class Player {
 	}
 
 	public void setBalance(int balance) {
+		//implement see if player lost
+		System.out.println(name + ", your new balance is $" + balance + ".");
 		this.balance = balance;
 	}
 
@@ -68,11 +78,11 @@ else {
 }
 	}
 
-	public ArrayList<String> getProperties() {
+	public ArrayList<Property> getProperties() {
 		return properties;
 	}
 
-	public void setProperties(ArrayList<String> properties) {
+	public void setProperties(ArrayList<Property> properties) {
 		this.properties = properties;
 	}
 
@@ -98,6 +108,9 @@ else {
 
 	public void setGoingBackwards(boolean goingBackwards) {
 		this.goingBackwards = goingBackwards;
+	}
+	public void addProperty(Property p) {
+		this.properties.add(p);
 	}
 	
 }

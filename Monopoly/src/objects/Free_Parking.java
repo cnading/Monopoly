@@ -1,5 +1,7 @@
 package objects;
 
+import program.Data;
+
 public class Free_Parking extends Space{
 
 
@@ -15,7 +17,10 @@ public class Free_Parking extends Space{
 	}
 
 	public void action() {
-		
+		Player p = Data.players.get(Data.turn);
+		p.setBalance(p.getBalance() + Data.moneyPile);
+		Data.moneyPile = 0;
+		p.setGoingBackwards(true);
 		
 	}
 

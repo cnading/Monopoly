@@ -36,6 +36,7 @@ public class TurnMenu
 		System.out.println("Press enter to roll the dice.");
 		strInput.nextLine();
 		System.out.println("You rolled a " + roll + ".");
+		Data.players.get(Data.turn).setMostRecentDiceRoll(roll);
 		//setLocation
 		if(Data.players.get(Data.turn).isGoingBackwards() == false)
 		{

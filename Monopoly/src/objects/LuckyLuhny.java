@@ -2,5 +2,5 @@ package objects;
 
 public interface LuckyLuhny {
 
-	public void theMethod();
+	public void theMethod(Player p);
 }
