@@ -9,6 +9,7 @@ public class TurnMenu
 	{
 		//var
 		
+		
 		int choice;
 		Scanner intInput = new Scanner(System.in);
 		//selectOption
