@@ -1,13 +1,15 @@
 package objects;
 
+import java.util.Scanner;
 
+import program.Data;
 
 public class Property extends Space{
 protected int cost;
 protected int[] fees;
 protected int houses;
 protected int hotels;
-protected Player owner;
+protected int owner;
 
 
 public Property(String theName, String theType, int theCost, int[] theFees, int housePrice) {
@@ -15,6 +17,7 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	name = theName;
 	cost = theCost;
 	fees = theFees;
+	owner = -1;
 	
 	
 	
@@ -69,19 +72,58 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	}
 
 
-	public Player getOwner() {
+	public int getOwner() {
 		return owner;
 	}
 
 
-	public void setOwner(Player owner) {
+	public void setOwner(int owner) {
 		this.owner = owner;
 	}
 
 
 	public void action() {
+		Player p = Data.players.get(Data.turn);
+		Property prop = (Property) Data.board[Data.turn];
+	if(owner == Data.turn) {
+		System.out.println("Have a nice stay on your property.");
+		return;
+	}	
+	
+	// buy prop
+	if(owner == -1) {	
+	System.out.println("Would you like to buy this property? Y or N");	
+	Scanner stringIn = new Scanner(System.in);	
+	String input = stringIn.nextLine();
+	if(input.toLowerCase().equals("y")) {
+		if(p.getBalance() < cost) {
+			System.out.println("Sorry, you can't afford this property.");
+			return;
+		}
+		p.addProperty(prop);
+		owner = Data.turn;
+		System.out.println("Congrats, you just bought " + name + ".");
+		return;
+	}
+	
+
+	else {
+		return;
 		
+	}
+	}
+	
+	// owe money
+	else {
 		
+	
+	Player p2 = Data.players.get(owner);
+	System.out.println(p2.getName() + "owns this property");
+	int theFee = fees[houses];
+	System.out.println("You owe $" + theFee + ".");
+	p.setBalance(p.getBalance() - theFee);
+	p2.setBalance(p.getBalance() + theFee);
+	}
 	}
 
 
