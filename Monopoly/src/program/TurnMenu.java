@@ -68,7 +68,7 @@ if(MonopolyRunner.testRollMode) {
 	roll = MonopolyRunner.testingRoll;
 }
 
-		i
+		
 		
 
 		
