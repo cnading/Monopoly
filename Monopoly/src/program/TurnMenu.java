@@ -162,7 +162,7 @@ if(MonopolyRunner.testRollMode) {
 		//getOption
 		System.out.println("Select an option from the list below.");
 		System.out.println("(1) View Properties");
-		System.out.println("(2) Morgage Properties");
+		System.out.println("(2) Mortgage Properties");
 		System.out.println("(3) Trade Properties");
 		System.out.print("Input: ");
 		choice = intInput.nextInt();

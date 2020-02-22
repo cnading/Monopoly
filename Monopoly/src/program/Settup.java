@@ -47,7 +47,7 @@ public class Settup {
 			System.out.println("Select a piece from the list below.");
 			for(String p: Data.pieces)
 			{
-				System.out.println("(" + count + ")" + p);
+				System.out.println("(" + count + ") " + p);
 				count++;
 			}
 			count = 1;
