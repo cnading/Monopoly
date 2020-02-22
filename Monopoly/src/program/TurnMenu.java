@@ -121,7 +121,9 @@ public class TurnMenu
 			if(Data.players.get(Data.turn).getOutOfJailCounter() > 2) {
 				Data.players.get(Data.turn).setOutOfJailCounter(0);
 				Data.players.get(Data.turn).setJail(false);
+				
 				System.out.println("You've served your sentence.");
+				
 				if(Data.players.get(Data.turn).isGoingBackwards() == false)
 				{
 					Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()+roll);
@@ -130,7 +132,7 @@ public class TurnMenu
 				{
 					Data.players.get(Data.turn).setPosition(Data.players.get(Data.turn).getPosition()-roll);
 				}	
-				
+				Data.players.get(Data.turn).setBalance(Data.players.get(Data.turn).getBalance() - 50);
 			}else {
 			System.out.println("Sorry, you're in jail.");
 			Data.players.get(Data.turn).setGoodToGo(false);
