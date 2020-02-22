@@ -29,7 +29,7 @@ public class Start
 		int choice = intInput.nextInt();
 		
 		if(choice == 1){
-			isMakingChoice = true;
+			isMakingChoice = false;
 			System.out.println("Each player chooses a token and starts on 'Go', provided with $1500, with one player acting as Banker");
 			System.out.println("Roll the dice, and you will move the number of squares indicated");
 			System.out.println("If you throw doubles, you take another turn, and each time you pass 'Go' you collect $200 from the bank");
@@ -84,8 +84,8 @@ public class Start
 			
 		}
 		
-		if(choice == 2) {
-			isMakingChoice = true;
+		else if(choice == 2) {
+			isMakingChoice = false;
 			System.out.println("Well then Pro, let's get into the game!");
 			
 			System.out.println("Super quickly though, let's review how you can win this game...");
@@ -100,7 +100,7 @@ public class Start
 		}
 		
 		else {
-			isMakingChoice = false;
+			isMakingChoice = true;
 			System.out.println("I'm sorry, that wasn't an option, try again.");
 			System.out.println("");
 		}

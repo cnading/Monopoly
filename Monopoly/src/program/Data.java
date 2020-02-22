@@ -20,4 +20,5 @@ public class Data
 	public static String[] files = {"ThemeData", "SpaceData"};
 	public static String [] l;
 	public static String[][] textBoard;
+	
 }

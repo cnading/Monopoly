@@ -15,7 +15,7 @@ public class Jail extends Space{
 	}
 
 	public void action() {
-		System.out.println("Don't worry, your just visiting.");
+		System.out.println("Don't worry, you're just visiting.");
 		
 	}
 

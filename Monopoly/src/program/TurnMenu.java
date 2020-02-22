@@ -10,11 +10,12 @@ public class TurnMenu
 		int choice;
 		Scanner intInput = new Scanner(System.in);
 		//selectOption
-		System.out.println(Data.players.get(Data.turn).getPiece() + "'s turn!");
+		System.out.println();
+		System.out.println(Data.players.get(Data.turn).getName()  + "  (" + Data.players.get(Data.turn).getPiece() +  ")'s turn!");
 		System.out.println("Select what you would like to do.");
 		System.out.println("(1) Roll Dice");
 		System.out.println("(2) Manage Properties");
-		System.out.print("Input:");
+		System.out.print("Input: ");
 		choice = intInput.nextInt();
 		//action
 		if(choice == 1)
@@ -31,6 +32,9 @@ public class TurnMenu
 	{
 		//var
 		int roll = (int) ((Math.random()*6+1) + (Math.random()*6+1));
+if(MonopolyRunner.testRollMode) {
+	roll = MonopolyRunner.testingRoll;
+}
 		Scanner strInput = new Scanner(System.in);
 		//rollDice
 		System.out.println("Press enter to roll the dice.");

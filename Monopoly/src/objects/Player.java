@@ -19,9 +19,9 @@ public class Player {
 	}
 	private int mostRecentDiceRoll;
 	private boolean goingBackwards;
-	private ArrayList <Property> properties;
+	private ArrayList <Space> properties;
 	
-	public Player(String n, String p, boolean j, int b, int po, ArrayList<Property> pro)
+	public Player(String n, String p, boolean j, int b, int po, ArrayList<Space> pro)
 	{
 		name = n;
 		piece = p;
@@ -78,11 +78,11 @@ else {
 }
 	}
 
-	public ArrayList<Property> getProperties() {
+	public ArrayList<Space> getProperties() {
 		return properties;
 	}
 
-	public void setProperties(ArrayList<Property> properties) {
+	public void setProperties(ArrayList<Space> properties) {
 		this.properties = properties;
 	}
 
@@ -109,7 +109,7 @@ else {
 	public void setGoingBackwards(boolean goingBackwards) {
 		this.goingBackwards = goingBackwards;
 	}
-	public void addProperty(Property p) {
+	public void addProperty(Space p) {
 		this.properties.add(p);
 	}
 	

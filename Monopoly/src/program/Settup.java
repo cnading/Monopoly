@@ -11,7 +11,7 @@ public class Settup {
 		String name;
 		String piece;
 		int pieceNumb;
-		ArrayList<Property> blank = new ArrayList<Property>();
+		ArrayList<Space> blank = new ArrayList<Space>();
 		Scanner intInput = new Scanner(System.in);
 		Scanner strInput = new Scanner(System.in);
 		int count = 1;
@@ -66,7 +66,7 @@ public class Settup {
 		//makeBoard
 		Data.board = Input_File.fillSpaceData(Data.files); 
 		Data.chestStack = Input_File.fillChestCards("CommunityChestCards", true);
-		Data.chestStack = Input_File.fillChestCards("ChanceCards", false);
+		Data.chanceStack = Input_File.fillChestCards("ChanceCards", false);
 		
 	//Community Chest Card methods:
 		

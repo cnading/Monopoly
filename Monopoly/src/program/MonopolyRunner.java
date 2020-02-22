@@ -7,8 +7,11 @@ import objects.Space;
 
 public class MonopolyRunner
 {
+	static boolean testRollMode = false;
+	static int testingRoll = 7;
 	public static void main(String[] args) throws Exception
 	{
+		
 		Intro.intro(); //ask to play
 		Settup.settup(); //ask numb of players and make players, make other objects
 		Start.start(); //welcome to game
