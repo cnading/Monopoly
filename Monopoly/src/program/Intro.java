@@ -25,7 +25,7 @@ public class Intro
 		}
 		else if(yOrN.equals("n"))
 		{
-			System.out.println("To bad you are playing anyways.\n");
+			System.out.println("Too bad you are playing anyways.\n");
 		}
 		else
 		{
