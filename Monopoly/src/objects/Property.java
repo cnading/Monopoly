@@ -87,6 +87,7 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 		Space prop = Data.board[p.getPosition()];
 	if(owner == Data.turn) {
 		System.out.println("Have a nice stay on your property.");
+		System.out.println("");
 		return;
 	}	
 	
@@ -98,12 +99,14 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	if(input.toLowerCase().equals("y")) {
 		if(p.getBalance() < cost) {
 			System.out.println("Sorry, you can't afford this property.");
+			System.out.println("");
 			return;
 		}
 		p.addProperty(prop);
 		owner = Data.turn;
 		p.setBalance(p.getBalance() - cost);
 		System.out.println("Congrats, you just bought " + name + ".");
+		System.out.println("");
 		return;
 	}
 	
