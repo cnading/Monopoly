@@ -7,10 +7,10 @@ public class Luck extends Space{
 
 
 
-	public Luck(String theName, String theType) {
+	public Luck(String theName, String theType, int thePos) {
 		type = theType;
 		name = theName;
-		
+		position = thePos;
 		
 		
 		

@@ -8,11 +8,11 @@ protected int[] fees;
 
 
 
-	public Income_Tax(String theName, String theType, int[] theFees) {
+	public Income_Tax(String theName, String theType, int[] theFees, int thePos) {
 		type = theType;
 		name = theName;
 	fees = theFees;
-		
+	position = thePos;
 		
 		
 	}

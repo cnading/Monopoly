@@ -43,6 +43,7 @@ int counter = 0;
 				switch(i) {
 				case 0: 
 					String[] stoof = line.split(" ");
+
 					String namey = stoof[1];
 					if(stoof.length > 1) {
 					for(int k = 2; k < stoof.length; k++) {
@@ -99,7 +100,7 @@ case "Property":
 		someFees[j - 1] = data;
 	}
 	int housePrice = Integer.parseInt((String) info.get(i).get(7));
-	thisIsIt[i] = new Property(names[i], types[i], price, someFees, housePrice);
+	thisIsIt[i] = new Property(names[i], types[i], price, someFees, housePrice, i);
 	break;
 	
 	
@@ -111,7 +112,7 @@ case "Railroad":
 		someFees2[j - 1] = data;
 	}
 
-	thisIsIt[i] = new Railroad(names[i], types[i], price2, someFees2);
+	thisIsIt[i] = new Railroad(names[i], types[i], price2, someFees2, i);
 	break;
 	
 	
@@ -123,7 +124,7 @@ case "Income_Tax":
 		someFees3[j] = data;
 	}
 	
-	thisIsIt[i] = new Income_Tax(names[i], types[i], someFees3);
+	thisIsIt[i] = new Income_Tax(names[i], types[i], someFees3, i);
 	break;
 	
 case "Luxury_Tax": 
@@ -133,34 +134,34 @@ case "Luxury_Tax":
 		someFees4[j] = data;
 	}
 	
-	thisIsIt[i] = new Luxury_Tax(names[i], types[i], someFees4);
+	thisIsIt[i] = new Luxury_Tax(names[i], types[i], someFees4, i);
 	break;
 	
 case "Luck": 
-	thisIsIt[i] = new Luck(names[i], types[i]);
+	thisIsIt[i] = new Luck(names[i], types[i], i);
 	break;
 	
 case "Jail": 
-	thisIsIt[i] = new Jail(names[i], types[i]);
+	thisIsIt[i] = new Jail(names[i], types[i], i);
 	break;
 	
 case "Free_Parking": 
-	thisIsIt[i] = new Free_Parking(names[i], types[i]);
+	thisIsIt[i] = new Free_Parking(names[i], types[i], i);
 	break;
 	
 case "Go_To_Jail": 
-	thisIsIt[i] = new Go_To_Jail(names[i], types[i]);
+	thisIsIt[i] = new Go_To_Jail(names[i], types[i], i);
 	break;
 	
 case "Go": 
-	thisIsIt[i] = new Go(names[i], types[i]);
+	thisIsIt[i] = new Go(names[i], types[i], i);
 	break;
 	
 case "Utility": 
 	int price5 = Integer.parseInt((String) info.get(i).get(0));
 	
 	
-	thisIsIt[i] = new Utility(names[i], types[i], price5);
+	thisIsIt[i] = new Utility(names[i], types[i], price5, i);
 	break;
 	default:
 		System.out.println("Something's wrong with the file.");

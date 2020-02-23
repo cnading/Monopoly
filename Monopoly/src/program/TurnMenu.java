@@ -1,5 +1,6 @@
 package program;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 import objects.*;
@@ -178,6 +179,7 @@ public class TurnMenu
 		System.out.println("(1) View Properties");
 		System.out.println("(2) Mortgage Properties");
 		System.out.println("(3) Trade Properties");
+		System.out.println("(4) Buy Houses/Hotels");
 		System.out.print("Input: ");
 		choice = intInput.nextInt();
 		//action
@@ -208,15 +210,108 @@ public class TurnMenu
 			System.out.println("Nothing here yet!");
 			System.out.println("");
 		}
+		if(choice == 4)
+		{
+			buyHousesMenu();
+		}
 		//add both trading and buying houses here
 	}
 	
+	
+
+
+
 	public static void useCards() 
 	{
 		TextGraphics.setBoardLoc();
 		TextGraphics.fillBoard();
 		TextGraphics.displayBoard();
 	}
+	
+	public static void buyHousesMenu() {
+		int choice;
+		Scanner intInput = new Scanner(System.in);
+		//getOption
+		
+		System.out.println();
+		int counter = 0;
+		ArrayList<Property> props= new ArrayList<Property>();
+		for(Space s: Data.players.get(Data.turn).getProperties()) {
+			if(s.getType().equals("Property")) {
+				counter++;
+				props.add((Property) s);
+				System.out.println("(" + counter + ") " + s.getName());
+				
+			}
+		}
+		
+		if(counter == 0) {
+			System.out.println("Sorry, you have no properties that you can add houses/hotels to");
+			return;
+		}
+		
+		System.out.println("Please choose the property you would like to add houses/hotels to.");
+		System.out.print("Input: ");
+		int choice2 = intInput.nextInt();
+		System.out.println();
+		System.out.println("Select an option from the list below.");
+		System.out.println("(1) Buy Houses");
+		System.out.println("(2) Buy Hotels");
+		System.out.print("Input: ");
+		choice = intInput.nextInt();
+		if(choice == 1) {
+			System.out.println();
+			int numHouses = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getHouses();
+			System.out.println("How many houses would you like to buy? Current number of houses: " + numHouses);
+			System.out.print("Input: ");
+			int choice3 = intInput.nextInt();
+			System.out.println();
+			if(numHouses + choice3 < 5){
+				((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).addHouses(choice3);
+			int index = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getPosition();
+			Data.board[index] = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1))));
+			System.out.println("" + choice3 + " houses were added to " + Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1))).getName() + ".");	
+			Data.players.get(Data.turn).setBalance(Data.players.get(Data.turn).getBalance() -  ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getHousePrice()  * choice3);
+			Data.players.get(Data.turn).setNumberOfHouses(Data.players.get(Data.turn).getNumberOfHouses() + 1);
+			}else {
+				System.out.println("Sorry, you can't buy that many houses.");
+				return;
+			}
+			
+			
+			
+			
+		}
+		if(choice == 2) {
+			System.out.println();
+			int numHouses = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getHouses();
+			if(numHouses == 4) {
+				((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).addHouses(1);	
+				((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).addHotels(1);
+				int index = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getPosition();
+				Data.board[index] = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1))));
+				System.out.println("A hotel was added to " + Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2-1 ))).getName() + ".");	
+				Data.players.get(Data.turn).setBalance(Data.players.get(Data.turn).getBalance() - ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getHousePrice());				
+				Data.players.get(Data.turn).setNumberOfHotels(Data.players.get(Data.turn).getNumberOfHotels() + 1);
+			}else {
+				System.out.println("You can't put a hotel on this property at the moment.");
+				return;
+			}
+			
+			
+			
+			
+			
+		}
+			
+			
+		
+		
+		
+		
+	}
+	
+	
 	public static void endGame() {
 		if( ! Data.players.get(Data.turn).isVotedToEndGame()) {
 			Data.votesToEndGame ++;

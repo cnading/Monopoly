@@ -7,10 +7,10 @@ public class Free_Parking extends Space{
 
 
 
-	public Free_Parking(String theName, String theType) {
+	public Free_Parking(String theName, String theType, int thePos) {
 		type = theType;
 		name = theName;
-		
+		position = thePos;
 		
 		
 		

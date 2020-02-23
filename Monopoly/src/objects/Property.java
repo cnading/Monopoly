@@ -10,17 +10,28 @@ protected int[] fees;
 protected int houses;
 protected int hotels;
 protected int owner;
+protected int housePrice;
 
 
-public Property(String theName, String theType, int theCost, int[] theFees, int housePrice) {
+public Property(String theName, String theType, int theCost, int[] theFees, int housePricey, int thePos) {
 	type = theType;
 	name = theName;
 	cost = theCost;
 	fees = theFees;
 	owner = -1;
+	position = thePos;
+	housePrice = housePricey;
 	
-	
-	
+}
+
+
+	public int getHousePrice() {
+	return housePrice;
+}
+
+
+public void setHousePrice(int housePrice) {
+	this.housePrice = housePrice;
 }
 
 
@@ -134,8 +145,12 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	Data.players.set(Data.turn, p);
 	
 	}
-
-
+public void addHouses(int number) {
+	this.houses += number;
+}
+public void addHotels(int number) {
+	this.hotels += number;
+}
 	
 	
 

@@ -4,6 +4,15 @@ public abstract class Space {
 	protected String name;
 	protected String type;
 	protected int cost;
+	protected int position;
+	public int getPosition() {
+		return position;
+	}
+
+	public void setPosition(int position) {
+		this.position = position;
+	}
+
 	public abstract void action();
 	
 	public String getName() {

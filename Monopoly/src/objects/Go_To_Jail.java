@@ -7,10 +7,10 @@ public class Go_To_Jail extends Space{
 
 
 
-	public Go_To_Jail(String theName, String theType) {
+	public Go_To_Jail(String theName, String theType, int thePos) {
 		type = theType;
 		name = theName;
-		
+		position = thePos;
 		
 		
 		

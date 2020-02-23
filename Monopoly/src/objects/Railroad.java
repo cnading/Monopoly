@@ -10,13 +10,13 @@ protected int[] fees;
 protected int owner;
 
 
-	public Railroad(String theName, String theType, int theCost, int[] theFees) {
+	public Railroad(String theName, String theType, int theCost, int[] theFees, int thePos) {
 		type = theType;
 		name = theName;
 		cost = theCost;
 		fees = theFees;
 		owner = -1;
-		
+		position = thePos;
 		
 		
 	}
