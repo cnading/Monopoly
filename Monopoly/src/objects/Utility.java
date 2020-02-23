@@ -10,12 +10,12 @@ protected int[] fees;
 protected int owner;
 
 
-	public Utility(String theName, String theType, int theCost) {
+	public Utility(String theName, String theType, int theCost, int thePos) {
 		type = theType;
 		name = theName;
 		cost = theCost;
 		owner = -1;
-		
+		position = thePos;
 		
 		
 	}

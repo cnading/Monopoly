@@ -19,6 +19,9 @@ public class Player {
 	private int numberOfHouses;
 	private int numberOfHotels;
 	private boolean votedToEndGame;
+	private int mostRecentDiceRoll;
+	private boolean goingBackwards;
+	private ArrayList <Space> properties;
 	public boolean isGoodToGo() {
 		return goodToGo;
 	}
@@ -50,9 +53,7 @@ public class Player {
 	public void setNumberOfUtilitiesOwned(int numberOfUtilitiesOwned) {
 		this.numberOfUtilitiesOwned = numberOfUtilitiesOwned;
 	}
-	private int mostRecentDiceRoll;
-	private boolean goingBackwards;
-	private ArrayList <Space> properties;
+	
 	
 	public Player(String n, String p, boolean j, int b, int po, ArrayList<Space> pro)
 	{
