@@ -61,7 +61,8 @@ protected int owner;
 	// buy prop
 	if(owner == -1) {	
 	System.out.println("Would you like to buy this property? It costs $" + cost + ". Y or N");		
-	Scanner stringIn = new Scanner(System.in);	
+	Scanner stringIn = new Scanner(System.in);
+	System.out.print("Input: ");
 	String input = stringIn.nextLine();
 	if(input.toLowerCase().equals("y")) {
 		if(p.getBalance() < cost) {
@@ -99,7 +100,6 @@ protected int owner;
 	System.out.println("You owe $" + theFee + ".");
 	p.setBalance(p.getBalance() - theFee);
 	p2.setBalance(p2.getBalance() + theFee);
-	System.out.println();
 	Data.players.set(owner, p2);
 	}
 	Data.players.set(Data.turn, p);

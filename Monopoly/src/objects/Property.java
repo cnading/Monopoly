@@ -98,7 +98,6 @@ public void setHousePrice(int housePrice) {
 		Space prop = Data.board[p.getPosition()];
 	if(owner == Data.turn) {
 		System.out.println("Have a nice stay on your property.");
-		System.out.println("");
 		return;
 	}	
 	
@@ -111,14 +110,12 @@ public void setHousePrice(int housePrice) {
 	if(input.toLowerCase().equals("y")) {
 		if(p.getBalance() < cost) {
 			System.out.println("Sorry, you can't afford this property.");
-			System.out.println("");
 			return;
 		}
 		p.addProperty(prop);
 		owner = Data.turn;
 		p.setBalance(p.getBalance() - cost);
 		System.out.println("Congrats, you just bought " + name + ".");
-		System.out.println("");
 		return;
 	}
 	
@@ -139,7 +136,6 @@ public void setHousePrice(int housePrice) {
 	System.out.println("You owe $" + theFee + ".");
 	p.setBalance(p.getBalance() - theFee);
 	p2.setBalance(p2.getBalance() + theFee);
-	System.out.println();
 	Data.players.set(owner, p2);
 	}
 	Data.players.set(Data.turn, p);

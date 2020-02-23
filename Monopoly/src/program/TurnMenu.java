@@ -25,7 +25,7 @@ public class TurnMenu
 		System.out.println("(4) Vote To End Game");
 		System.out.print("Input: ");
 		choice = intInput.nextInt();
-		System.out.println();
+		//System.out.println();
 		//action
 		if(choice == 1)
 		{
@@ -63,7 +63,6 @@ public class TurnMenu
 		//rollDice
 		System.out.print("Press enter to roll the dice.");
 		strInput.nextLine();
-		System.out.println();
     System.out.println("You rolled a " + roll + ".");
 		Data.players.get(Data.turn).setMostRecentDiceRoll(roll);
 		if(Data.rolledDoubles) {
@@ -197,18 +196,15 @@ public class TurnMenu
 					System.out.print(" \"" + p.getName() + "\"");
 				}
 			}
-			
 			System.out.println("");
 		}
 		if(choice == 2)
 		{
 			System.out.println("Nothing here yet!");
-			System.out.println("");
 		}
 		if(choice == 3)
 		{
 			System.out.println("Nothing here yet!");
-			System.out.println("");
 		}
 		if(choice == 4)
 		{

@@ -27,6 +27,7 @@ public class Start
 		
 		Scanner intInput = new Scanner(System.in);
 		System.out.print("Input: ");
+		System.out.println("");
 		int choice = intInput.nextInt();
 		
 		if(choice == 1){
@@ -97,13 +98,11 @@ public class Start
 			System.out.println("You chose to end the game, and tally the total worth of each player (including buildings and all property worth)");
 			System.out.println();
 			System.out.println("Official rules state that the last player in the game, or the player with the most money wins.");
-			System.out.println("");
 		}
 		
 		else {
 			isMakingChoice = true;
 			System.out.println("I'm sorry, that wasn't an option, try again.");
-			System.out.println("");
 		}
 		
 		}
