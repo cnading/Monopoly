@@ -20,7 +20,7 @@ public class TurnMenu
 		System.out.println("Select what you would like to do.");
 		System.out.println("(1) Roll Dice");
 		System.out.println("(2) Manage Properties");
-		System.out.println("(3) Use Cards");
+		System.out.println("(3) View Position On Board");
 		System.out.println("(4) Vote To End Game");
 		System.out.print("Input: ");
 		choice = intInput.nextInt();
@@ -213,8 +213,9 @@ public class TurnMenu
 	
 	public static void useCards() 
 	{
-		System.out.println("Nothing here yet!"); //add list of cards, and the ability to run their actions
-		System.out.println("");
+		TextGraphics.setBoardLoc();
+		TextGraphics.fillBoard();
+		TextGraphics.displayBoard();
 	}
 	public static void endGame() {
 		if( ! Data.players.get(Data.turn).isVotedToEndGame()) {
