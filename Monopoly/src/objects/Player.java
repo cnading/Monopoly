@@ -22,6 +22,7 @@ public class Player {
 	private int mostRecentDiceRoll;
 	private boolean goingBackwards;
 	private ArrayList <Space> properties;
+	private int positionInList;
 	public boolean isGoodToGo() {
 		return goodToGo;
 	}
@@ -134,7 +135,38 @@ if(goodToGo) {
 	}
 
 	public ArrayList<Space> getProperties() {
-		return properties;
+		ArrayList<Space> tempy = new ArrayList<Space>();
+		for(Space s: properties) {
+			if(s.getType().equals("Property") && ((Property)s).getOwner() == getPlaceInListByPieceName(piece)) {
+				tempy.add(s);
+			}
+			if(s.getType().equals("Railroad") && ((Railroad)s).getOwner() == getPlaceInListByPieceName(piece)) {
+				tempy.add(s);
+			}
+			if(s.getType().equals("Utility") && ((Utility)s).getOwner() == getPlaceInListByPieceName(piece)) {
+				tempy.add(s);
+			}
+			
+		}
+		
+		return tempy;
+	}
+
+	public static int getPlaceInListByPieceName(String peace) {
+		for(int i = 0; i < Data.players.size(); i++) {
+			if(Data.players.get(i).getPiece().equals(peace)) {
+				return i;
+			}
+		}
+		return -1;
+	}
+	
+	public int getPositionInList() {
+		return positionInList;
+	}
+
+	public void setPositionInList(int positionInList) {
+		this.positionInList = positionInList;
 	}
 
 	public void setProperties(ArrayList<Space> properties) {

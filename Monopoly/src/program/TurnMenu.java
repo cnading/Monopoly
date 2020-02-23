@@ -262,7 +262,11 @@ public class TurnMenu
 		if(choice == 1) {
 			System.out.println();
 			int numHouses = ((Property) Data.players.get(Data.turn).getProperties().get(Data.players.get(Data.turn).getProperties().indexOf(props.get(choice2 - 1)))).getHouses();
-			System.out.println("How many houses would you like to buy? Current number of houses: " + numHouses);
+			int tempNumHouse = numHouses;
+			if(numHouses > 4) {
+				tempNumHouse = 4;
+			}
+			System.out.println("How many houses would you like to buy? Current number of houses: " + tempNumHouse);
 			System.out.print("Input: ");
 			int choice3 = intInput.nextInt();
 			System.out.println();
