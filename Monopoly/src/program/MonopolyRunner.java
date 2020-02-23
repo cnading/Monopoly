@@ -20,6 +20,6 @@ public class MonopolyRunner
 		{
 			TurnMenu.turnMenu(); //players turn
 		}
-		//CongraWinner.congraWinner(); //congradulate the winner
+		CongraWinner.congraWinner(); //congradulate the winner
 	}
 }
