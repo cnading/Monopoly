@@ -249,7 +249,7 @@ public class TurnMenu
 			System.out.println("Sorry, you have no properties that you can add houses/hotels to");
 			return;
 		}
-		
+		System.out.println();
 		System.out.println("Please choose the property you would like to add houses/hotels to.");
 		System.out.print("Input: ");
 		int choice2 = intInput.nextInt();
