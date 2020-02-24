@@ -17,12 +17,13 @@ public class Data
 	public static ArrayList<LuckyLuhny> chestCardMethods = new ArrayList<LuckyLuhny>();
 	public static ArrayList<LuckyLuhny> chanceCardMethods = new ArrayList<LuckyLuhny>();
 	public static int moneyPile = 0;
-	public static String[] files = {"ThemeData", "SpaceData"};
+	public static String[] files = {Data.themeFileName, "SpaceData"};
 	public static String [] l;
 	public static String[][] textBoard;
 	public static boolean rolledDoubles;
 	public static int doubleCounter;
 	public static int votesToEndGame;
 	public static boolean goodToGo;
+	public static String themeFileName;
 
 }

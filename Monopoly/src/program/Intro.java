@@ -31,5 +31,28 @@ public class Intro
 		{
 			System.out.println("I'll take that as a yes!\n");
 		}
+		
+		//getInput
+				System.out.println();
+				System.out.println("Which theme would you like to play? 1 or 2.");
+				System.out.print("Input: ");
+				String yOrN2 = strInput.nextLine().toLowerCase();
+				
+				//action
+				if(yOrN2.equals("1"))
+				{
+					String[] temp = {"ThemeData", "SpaceData"};
+					Data.files = temp;
+				}
+				else if(yOrN2.equals("2"))
+				{
+					String[] temp = {"ThemeData2", "SpaceData"};
+					Data.files = temp;
+				}
+				else
+				{
+					System.out.println("You had one job.");
+				}
+		
 	}
 }
