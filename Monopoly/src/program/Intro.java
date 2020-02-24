@@ -34,7 +34,7 @@ public class Intro
 		
 		//getInput
 				System.out.println();
-				System.out.println("Which theme would you like to play? 1 or 2.");
+				System.out.println("Which theme would you like to play? Classic(1) or Mystery(2).");
 				System.out.print("Input: ");
 				String yOrN2 = strInput.nextLine().toLowerCase();
 				
