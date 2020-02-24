@@ -12,7 +12,7 @@ public class Intro
 		
 		//getInput
 		System.out.println("Welcome to the fabulous game of text based Monopoly!");
-		System.out.println("Its just like regular Monoploy without the fun!");
+		System.out.println("It's just like regular Monoploy without the fun!");
 		System.out.println();
 		System.out.println("Would you like to play? Y or N.");
 		System.out.print("Input: ");
