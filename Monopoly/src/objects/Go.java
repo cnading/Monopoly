@@ -5,10 +5,10 @@ public class Go extends Space{
 
 
 
-	public Go(String theName, String theType) {
+	public Go(String theName, String theType, int thePos) {
 		type = theType;
 		name = theName;
-		
+		position = thePos;
 		
 		
 		

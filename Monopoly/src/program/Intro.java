@@ -12,9 +12,10 @@ public class Intro
 		
 		//getInput
 		System.out.println("Welcome to the fabulous game of text based Monopoly!");
-		System.out.println("Its just like regular Monoploy without the fun!");
+		System.out.println("It's just like regular Monoploy without the fun!");
 		System.out.println();
 		System.out.println("Would you like to play? Y or N.");
+		System.out.print("Input: ");
 		yOrN = strInput.nextLine().toLowerCase();
 		
 		//action
@@ -24,7 +25,7 @@ public class Intro
 		}
 		else if(yOrN.equals("n"))
 		{
-			System.out.println("To bad you are playing anyways.\n");
+			System.out.println("Too bad you are playing anyways.\n");
 		}
 		else
 		{

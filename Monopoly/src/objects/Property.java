@@ -1,23 +1,37 @@
 package objects;
 
+import java.util.Scanner;
 
+import program.Data;
 
 public class Property extends Space{
-protected int cost;
+
 protected int[] fees;
 protected int houses;
 protected int hotels;
-protected Player owner;
+protected int owner;
+protected int housePrice;
 
 
-public Property(String theName, String theType, int theCost, int[] theFees, int housePrice) {
+public Property(String theName, String theType, int theCost, int[] theFees, int housePricey, int thePos) {
 	type = theType;
 	name = theName;
 	cost = theCost;
 	fees = theFees;
+	owner = -1;
+	position = thePos;
+	housePrice = housePricey;
 	
-	
-	
+}
+
+
+	public int getHousePrice() {
+	return housePrice;
+}
+
+
+public void setHousePrice(int housePrice) {
+	this.housePrice = housePrice;
 }
 
 
@@ -69,22 +83,70 @@ public Property(String theName, String theType, int theCost, int[] theFees, int 
 	}
 
 
-	public Player getOwner() {
+	public int getOwner() {
 		return owner;
 	}
 
 
-	public void setOwner(Player owner) {
+	public void setOwner(int owner) {
 		this.owner = owner;
 	}
 
 
 	public void action() {
-		
+		Player p = Data.players.get(Data.turn);
+		Space prop = Data.board[p.getPosition()];
+	if(owner == Data.turn) {
+		System.out.println("Have a nice stay on your property.");
+		return;
+	}	
+	
+	// buy prop
+	if(owner == -1) {	
+	System.out.println("Would you like to buy this property? It costs $" + cost + ". Y or N");	
+	Scanner stringIn = new Scanner(System.in);	
+	System.out.print("Input: ");
+	String input = stringIn.nextLine();
+	if(input.toLowerCase().equals("y")) {
+		if(p.getBalance() < cost) {
+			System.out.println("Sorry, you can't afford this property.");
+			return;
+		}
+		p.addProperty(prop);
+		owner = Data.turn;
+		p.setBalance(p.getBalance() - cost);
+		System.out.println("Congrats, you just bought " + name + ".");
+		return;
+	}
+	
+
+	else {
+		return;
 		
 	}
-
-
+	}
+	
+	// owe money
+	else {
+		
+	
+	Player p2 = Data.players.get(owner);
+	System.out.println(p2.getName() + " owns this property.");
+	int theFee = fees[houses];
+	System.out.println("You owe $" + theFee + ".");
+	p.setBalance(p.getBalance() - theFee);
+	p2.setBalance(p2.getBalance() + theFee);
+	Data.players.set(owner, p2);
+	}
+	Data.players.set(Data.turn, p);
+	
+	}
+public void addHouses(int number) {
+	this.houses += number;
+}
+public void addHotels(int number) {
+	this.hotels += number;
+}
 	
 	
 
